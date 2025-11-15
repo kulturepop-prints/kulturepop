@@ -22,8 +22,7 @@ const slugify = (text) => text.toLowerCase().replace(/\s+/g, "-");
 const Collection = () => {
   return (
     <div className="p-10 lg:flex items-center gap-x-10">
-      <div className="text-lg md:text-3xl font-exo2-bolditalic mb-6 text-[#1f1f1f]
-  drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
+      <div className="text-lg md:text-3xl font-exo2-bolditalic mb-6 text-[#1f1f1f] drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
   Top Tier Collection:
 </div>
 

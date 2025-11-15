@@ -17,7 +17,7 @@ export default function Home() {
 >
         <div className="text-3xl font-exo2-extrabold tracking-wide text-black">KulturePop</div>
 
-        <nav className="flex space-x-10 text-lg font-medium">
+        <nav className="flex space-x-10 text-lg font-exo2-semibold">
           <a href="#explore" className="hover:text-black hover:underline transition-colors">
             Explore
           </a>
@@ -38,8 +38,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroComponent />
+      <div className="w-full flex justify-center items-center mt-10">
+  <Collection />
+</div>
 
-      <Collection/>
     </div>
   );
 }
