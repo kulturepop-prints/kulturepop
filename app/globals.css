@@ -1,195 +1,358 @@
-@import "tailwindcss";
+/* Custom Font Families */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;0,700;0,800;1,700;1,900&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables */
 :root {
-  --background: #f9f6eb;
-  --foreground: #171717;
-}
-/* === EXO 2 FONT SETUP === */
-@font-face {
-  font-family: "Exo2-Black";
-  src: url("/fonts/Exo2-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-BlackItalic";
-  src: url("/fonts/Exo2-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #f9fafb;
+  --card-foreground: #0a0a0a;
+  --primary: #1f1f1f;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #1f1f1f;
+  --accent: #6d64f7;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --radius: 0.5rem;
 }
 
-@font-face {
-  font-family: "Exo2-Bold";
-  src: url("/fonts/Exo2-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #27272a;
+  --secondary-foreground: #ffffff;
+  --accent: #8b82ff;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #27272a;
 }
 
-@font-face {
-  font-family: "Exo2-BoldItalic";
-  src: url("/fonts/Exo2-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@font-face {
-  font-family: "Exo2-ExtraBold";
-  src: url("/fonts/Exo2-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-ExtraBoldItalic";
-  src: url("/fonts/Exo2-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Exo2-ExtraLight";
-  src: url("/fonts/Exo2-ExtraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-ExtraLightItalic";
-  src: url("/fonts/Exo2-ExtraLightItalic.ttf") format("truetype");
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Exo2-Italic";
-  src: url("/fonts/Exo2-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Exo2-Light";
-  src: url("/fonts/Exo2-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-LightItalic";
-  src: url("/fonts/Exo2-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Exo2-Medium";
-  src: url("/fonts/Exo2-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-MediumItalic";
-  src: url("/fonts/Exo2-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Exo2-Regular";
-  src: url("/fonts/Exo2-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-SemiBold";
-  src: url("/fonts/Exo2-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-SemiBoldItalic";
-  src: url("/fonts/Exo2-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Exo2-Thin";
-  src: url("/fonts/Exo2-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-ThinItalic";
-  src: url("/fonts/Exo2-ThinItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
-}
-
-@theme {
-  --font-exo2-black: "Exo2-Black", sans-serif;
-  --font-exo2-blackitalic: "Exo2-BlackItalic", sans-serif;
-  --font-exo2-bold: "Exo2-Bold", sans-serif;
-  --font-exo2-bolditalic: "Exo2-BoldItalic", sans-serif;
-  --font-exo2-extrabold: "Exo2-ExtraBold", sans-serif;
-  --font-exo2-extrabolditalic: "Exo2-ExtraBoldItalic", sans-serif;
-  --font-exo2-extralight: "Exo2-ExtraLight", sans-serif;
-  --font-exo2-extralightitalic: "Exo2-ExtraLightItalic", sans-serif;
-  --font-exo2-italic: "Exo2-Italic", sans-serif;
-  --font-exo2-light: "Exo2-Light", sans-serif;
-  --font-exo2-lightitalic: "Exo2-LightItalic", sans-serif;
-  --font-exo2-medium: "Exo2-Medium", sans-serif;
-  --font-exo2-mediumitalic: "Exo2-MediumItalic", sans-serif;
-  --font-exo2-regular: "Exo2-Regular", sans-serif;
-  --font-exo2-semibold: "Exo2-SemiBold", sans-serif;
-  --font-exo2-semibolditalic: "Exo2-SemiBoldItalic", sans-serif;
-  --font-exo2-thin: "Exo2-Thin", sans-serif;
-  --font-exo2-thinitalic: "Exo2-ThinItalic", sans-serif;
-}
-
-@layer utilities {
-  .font-exo2-black { font-family: var(--font-exo2-black); }
-  .font-exo2-blackitalic { font-family: var(--font-exo2-blackitalic); }
-  .font-exo2-bold { font-family: var(--font-exo2-bold); }
-  .font-exo2-bolditalic { font-family: var(--font-exo2-bolditalic); }
-  .font-exo2-extrabold { font-family: var(--font-exo2-extrabold); }
-  .font-exo2-extrabolditalic { font-family: var(--font-exo2-extrabolditalic); }
-  .font-exo2-extralight { font-family: var(--font-exo2-extralight); }
-  .font-exo2-extralightitalic { font-family: var(--font-exo2-extralightitalic); }
-  .font-exo2-italic { font-family: var(--font-exo2-italic); }
-  .font-exo2-light { font-family: var(--font-exo2-light); }
-  .font-exo2-lightitalic { font-family: var(--font-exo2-lightitalic); }
-  .font-exo2-medium { font-family: var(--font-exo2-medium); }
-  .font-exo2-mediumitalic { font-family: var(--font-exo2-mediumitalic); }
-  .font-exo2-regular { font-family: var(--font-exo2-regular); }
-  .font-exo2-semibold { font-family: var(--font-exo2-semibold); }
-  .font-exo2-semibolditalic { font-family: var(--font-exo2-semibolditalic); }
-  .font-exo2-thin { font-family: var(--font-exo2-thin); }
-  .font-exo2-thinitalic { font-family: var(--font-exo2-thinitalic); }
-}
-
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #f9f6eb;
-    --foreground: #171717;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Custom Font Classes */
+.font-exo2-bolditalic {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.font-exo2-blackitalic {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Selection Styling */
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .animate-out {
+    animation: fadeOut 0.5s ease-out;
+  }
+  
+  .slide-in-from-top {
+    animation: slideInFromTop 0.3s ease-out;
+  }
+  
+  .slide-in-from-bottom {
+    animation: slideInFromBottom 0.3s ease-out;
+  }
+  
+  .slide-in-from-left {
+    animation: slideInFromLeft 0.3s ease-out;
+  }
+  
+  .slide-in-from-right {
+    animation: slideInFromRight 0.3s ease-out;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4),
+              0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #8b82ff 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Ripple Effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Image Zoom on Hover */
+.image-zoom {
+  overflow: hidden;
+}
+
+.image-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.image-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Skeleton Loading */
+.skeleton {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg, #27272a 25%, #3f3f46 50%, #27272a 75%);
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  header, footer, nav {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}
+
