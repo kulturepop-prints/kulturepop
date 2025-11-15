@@ -4,6 +4,175 @@
   --background: #f9f6eb;
   --foreground: #171717;
 }
+/* === EXO 2 FONT SETUP === */
+@font-face {
+  font-family: "Exo2-Black";
+  src: url("/fonts/Exo2-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-BlackItalic";
+  src: url("/fonts/Exo2-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Bold";
+  src: url("/fonts/Exo2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-BoldItalic";
+  src: url("/fonts/Exo2-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-ExtraBold";
+  src: url("/fonts/Exo2-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-ExtraBoldItalic";
+  src: url("/fonts/Exo2-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-ExtraLight";
+  src: url("/fonts/Exo2-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-ExtraLightItalic";
+  src: url("/fonts/Exo2-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Italic";
+  src: url("/fonts/Exo2-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Light";
+  src: url("/fonts/Exo2-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-LightItalic";
+  src: url("/fonts/Exo2-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Medium";
+  src: url("/fonts/Exo2-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-MediumItalic";
+  src: url("/fonts/Exo2-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Regular";
+  src: url("/fonts/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-SemiBold";
+  src: url("/fonts/Exo2-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-SemiBoldItalic";
+  src: url("/fonts/Exo2-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Thin";
+  src: url("/fonts/Exo2-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-ThinItalic";
+  src: url("/fonts/Exo2-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@theme {
+  --font-exo2-black: "Exo2-Black", sans-serif;
+  --font-exo2-blackitalic: "Exo2-BlackItalic", sans-serif;
+  --font-exo2-bold: "Exo2-Bold", sans-serif;
+  --font-exo2-bolditalic: "Exo2-BoldItalic", sans-serif;
+  --font-exo2-extrabold: "Exo2-ExtraBold", sans-serif;
+  --font-exo2-extrabolditalic: "Exo2-ExtraBoldItalic", sans-serif;
+  --font-exo2-extralight: "Exo2-ExtraLight", sans-serif;
+  --font-exo2-extralightitalic: "Exo2-ExtraLightItalic", sans-serif;
+  --font-exo2-italic: "Exo2-Italic", sans-serif;
+  --font-exo2-light: "Exo2-Light", sans-serif;
+  --font-exo2-lightitalic: "Exo2-LightItalic", sans-serif;
+  --font-exo2-medium: "Exo2-Medium", sans-serif;
+  --font-exo2-mediumitalic: "Exo2-MediumItalic", sans-serif;
+  --font-exo2-regular: "Exo2-Regular", sans-serif;
+  --font-exo2-semibold: "Exo2-SemiBold", sans-serif;
+  --font-exo2-semibolditalic: "Exo2-SemiBoldItalic", sans-serif;
+  --font-exo2-thin: "Exo2-Thin", sans-serif;
+  --font-exo2-thinitalic: "Exo2-ThinItalic", sans-serif;
+}
+
+@layer utilities {
+  .font-exo2-black { font-family: var(--font-exo2-black); }
+  .font-exo2-blackitalic { font-family: var(--font-exo2-blackitalic); }
+  .font-exo2-bold { font-family: var(--font-exo2-bold); }
+  .font-exo2-bolditalic { font-family: var(--font-exo2-bolditalic); }
+  .font-exo2-extrabold { font-family: var(--font-exo2-extrabold); }
+  .font-exo2-extrabolditalic { font-family: var(--font-exo2-extrabolditalic); }
+  .font-exo2-extralight { font-family: var(--font-exo2-extralight); }
+  .font-exo2-extralightitalic { font-family: var(--font-exo2-extralightitalic); }
+  .font-exo2-italic { font-family: var(--font-exo2-italic); }
+  .font-exo2-light { font-family: var(--font-exo2-light); }
+  .font-exo2-lightitalic { font-family: var(--font-exo2-lightitalic); }
+  .font-exo2-medium { font-family: var(--font-exo2-medium); }
+  .font-exo2-mediumitalic { font-family: var(--font-exo2-mediumitalic); }
+  .font-exo2-regular { font-family: var(--font-exo2-regular); }
+  .font-exo2-semibold { font-family: var(--font-exo2-semibold); }
+  .font-exo2-semibolditalic { font-family: var(--font-exo2-semibolditalic); }
+  .font-exo2-thin { font-family: var(--font-exo2-thin); }
+  .font-exo2-thinitalic { font-family: var(--font-exo2-thinitalic); }
+}
+
 
 @theme inline {
   --color-background: var(--background);
